@@ -1,4 +1,3 @@
-```css
 /* style.css - the looks of your to-do list */
 
 :root {
@@ -108,7 +107,7 @@ button {
 }
 
 #add-btn:hover {
-    background: var(--accent-dark);
+    background: #e1dbdb;
 }
 
 /* ---------- Task list ---------- */
