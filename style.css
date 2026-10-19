@@ -107,7 +107,7 @@ button {
 }
 
 #add-btn:hover {
-    background: #e1dbdb;
+    background: var(--accent-dark);
 }
 
 /* ---------- Task list ---------- */
