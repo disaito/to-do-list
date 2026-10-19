@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>To do list</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h3>List</h3>
+
+        <!-- Progress section -->
+        <div id="progress-section">
+            <p id="progress-text">0 of 0 done</p>
+            <div id="progress-track">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Add task form (this is OUTSIDE the progress section) -->
+        <div id="add-task">
+            <input type="text" id="task-input" placeholder="New task...">
+            <input type="date" id="date-input">
+            <select id="category-input">
+                <option>Project</option>
+                <option>Work</option>
+                <option>School</option>
+                <option>Personal</option>
+            </select>
+            <button id="add-btn">Add</button>
+        </div>
+
+        <!-- JS fills this in -->
+        <ul id="task-list"></ul>
+
+        <script src="renderer.js"></script>
+    </body>
+</html>

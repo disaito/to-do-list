@@ -1,0 +1,216 @@
+```css
+/* style.css - the looks of your to-do list */
+
+:root {
+    --bg: #eef2f4;
+    --card: #ffffff;
+    --text: #1f2a30;
+    --muted: #6b7a83;
+    --accent: #1f7a6d;
+    --accent-dark: #17594f;
+    --danger: #c0392b;
+    --line: #dde4e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+h3 {
+    font-size: 28px;
+    margin: 0 0 16px;
+}
+
+/* ---------- Progress ---------- */
+#progress-section {
+    margin-bottom: 20px;
+}
+
+#progress-text {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+#progress-track {
+    background: #999f9e;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    background: #434545;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ---------- Add task form ---------- */
+#add-task {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    background: var(--card);
+}
+
+#task-input {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+#date-input,
+#category-input {
+    flex: 1;
+    min-width: 0;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--accent);
+    border-color: transparent;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+#add-btn {
+    background: var(--accent);
+    color: rgb(125, 152, 210);
+    font-weight: 600;
+    padding: 16px 24px;
+}
+
+#add-btn:hover {
+    background: var(--accent-dark);
+}
+
+/* ---------- Task list ---------- */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 12px;
+    margin-bottom: 8px;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-text {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ---------- Task status ---------- */
+li.done .task-text {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+li.overdue .due-date {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+/* ---------- Category tags ---------- */
+.tag {
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.tag.work {
+    background: #3b6ea5;
+}
+
+.tag.school {
+    background: #b5651d;
+}
+
+.tag.personal {
+    background: #7b5ea7;
+}
+
+.tag.project {
+    background: #2e8b57;
+}
+
+/* ---------- Edit and Delete buttons ---------- */
+.edit-btn {
+    background: var(--line);
+    color: var(--text);
+    padding: 6px 10px;
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--danger);
+    padding: 6px 10px;
+}
+
+.delete-btn:hover {
+    background: #fbeae8;
+}
+
+/* ---------- Checkbox ---------- */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+/* ---------- Empty task list ---------- */
+.empty {
+    justify-content: center;
+    color: var(--muted);
+}
